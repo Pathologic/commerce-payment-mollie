@@ -1,9 +1,9 @@
 <?php
 
-setlocale(LC_ALL, 'en_US.UTF-8');
+setlocale(LC_ALL, 'nl_NL.UTF-8');
 
 return [
-    'mollie.caption' => 'Online payment',
-    'mollie.error_empty_api_key' => 'Set an api key in the plugin settings',
-    'mollie.link_caption' => 'Payment link',
+    'mollie.caption' => 'Online betaling',
+    'mollie.error_empty_api_key' => 'Stel een api-sleutel in via de Plug-in instellingen ',
+    'mollie.link_caption' => 'Betaallink',
 ];
