@@ -88,7 +88,7 @@ class MolliePayment extends Payment
             }
             if (!empty($_payment->metadata->orderId) && !empty($_payment->metadata->paymentId) && !empty($_payment->metadata->paymentHash) && $_payment->isPaid()) {
                 try {
-                    ci()->commerce->loadProcessor()->processPayment($_payment->metadata->paymentId, (float)$_payment->amount);
+                    ci()->commerce->loadProcessor()->processPayment($_payment->metadata->paymentId, (float)$_payment->amount->value);
                 } catch (\Exception $e) {
                     if ($this->debug) {
                         $this->modx->logEvent(0, 3, 'Payment processing failed: ' . $e->getMessage(), 'Commerce Mollie Payment');
